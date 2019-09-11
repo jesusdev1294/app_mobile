@@ -1,14 +1,34 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header color="blue" [ngClass]="ocultar">
+    <ion-toolbar color="primary">
+        <img src="/assets/slides/chef.png" class="avatar animated fadeIn">
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content color="dark">
+
+    <ion-title color="dark" class="contanier"> <img style="width: 200px; height: 50px;" src="/assets/slides/sushi14.webp" class="avatar animated fadeIn"></ion-title>
+    <ion-slides pager="true" class="slide-full">
+
+        <ion-slide *ngFor="let slide of slides ">
+
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title style="color:white">{{slide.titulo}}</ion-card-title>
+                </ion-card-header>
+
+                <a [href]="slide.url1"> <img [src]="slide.img" class="slide-image"></a>
+
+                <ion-card-content style="color:white">
+                    {{slide.desc}}
+                </ion-card-content>
+
+            </ion-card>
+        </ion-slide>
+
+    </ion-slides>
+
 </ion-content>
+
+<ion-footer color="primary">
+
+</ion-footer>
