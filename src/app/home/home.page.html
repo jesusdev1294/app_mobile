@@ -1,25 +1,26 @@
-<ion-header color="blue" [ngClass]="ocultar">
-    <ion-toolbar color="primary">
-        <img src="/assets/slides/chef.png" class="avatar animated fadeIn">
+<ion-header class="content-color">
+    <ion-toolbar class="content-color">
+        <img src="/assets/slides/sugoy000.jpg" class="avatar animated fadeIn">
     </ion-toolbar>
 </ion-header>
 
-<ion-content color="dark">
 
-    <ion-title color="dark" class="contanier"> <img style="width: 200px; height: 50px;" src="/assets/slides/sushi14.webp" class="avatar animated fadeIn"></ion-title>
+<ion-content class="content-color">
+
     <ion-slides pager="true" class="slide-full">
-
         <ion-slide *ngFor="let slide of slides ">
-
             <ion-card>
+                <img [src]="slide.img" class="slide-image">
+
                 <ion-card-header>
-                    <ion-card-title style="color:white">{{slide.titulo}}</ion-card-title>
+                    <ion-card-title>
+                        <ion-text style="color: white;">{{slide.titulo}}</ion-text>
+                    </ion-card-title>
                 </ion-card-header>
-
-                <a [href]="slide.url1"> <img [src]="slide.img" class="slide-image"></a>
-
-                <ion-card-content style="color:white">
-                    {{slide.desc}}
+                <ion-card-content>
+                    <a href=`${slide.url1}` style="text-decoration:none">
+                        <ion-text style="color: white;">{{slide.desc}}</ion-text>
+                    </a>
                 </ion-card-content>
 
             </ion-card>
@@ -28,7 +29,3 @@
     </ion-slides>
 
 </ion-content>
-
-<ion-footer color="primary">
-
-</ion-footer>

@@ -1,0 +1,62 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-title>
+            App Mobile Doctor Hora
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-item-divider>
+    <ion-label style="color: indigo">
+        Reservar
+    </ion-label>
+    <ion-label style="color:indigo">
+        Anular..
+    </ion-label>
+</ion-item-divider>
+<ion-content style="top: 40px;">
+
+    <img src="/assets/icon/logo_3.png" style="width: 200px; height: 70px;">
+    <div class="ion-padding">
+
+
+
+    </div>
+
+    <ion-list>
+        <ion-list-header>
+            <ion-label>
+                Disponibles
+            </ion-label>
+        </ion-list-header>
+
+        <ion-item>
+            <ion-label>Profesional</ion-label>
+            <ion-select [interfaceOptions]="customAlertOptions" interface="alert" multiple="false" placeholder="Select One">
+                <ion-select-option value="bacon">ALberto Fernandez</ion-select-option>
+                <ion-select-option value="olives">Leopoldo Castillo</ion-select-option>
+                <ion-select-option value="xcheese">Miguel Alcala</ion-select-option>
+                <ion-select-option value="peppers">Jose Gomez</ion-select-option>
+                <ion-select-option value="mushrooms">Maria Perez</ion-select-option>
+                <ion-select-option value="onions">Jesus Lopez</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+
+
+
+    </ion-list>
+
+
+    <ion-button routerLink="/horario" style="top:20px" color="secondary">Seguir</ion-button>
+    <ion-button color="secondary">Cancelar</ion-button>
+
+
+
+</ion-content>
+
+
+<ion-footer>
+    <ion-toolbar color="tertiary">
+        <ion-title>derechos reservados</ion-title>
+    </ion-toolbar>
+</ion-footer>
